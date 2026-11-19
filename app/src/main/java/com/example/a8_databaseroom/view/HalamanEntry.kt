@@ -24,18 +24,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.a8_databaseroom.R
-import com.example.a8_databaseroom.view.route.DestinasiNavigasi
-import com.example.a8_databaseroom.view.uicontroller.SiswaTopAppBar
+import com.example.a8_databaseroom.view.route.DestinasiEntry
 import com.example.a8_databaseroom.viewmodel.DetailSiswa
 import com.example.a8_databaseroom.viewmodel.EntryViewModel
 import com.example.a8_databaseroom.viewmodel.provider.PenyediaViewModel
 import com.example.a8_databaseroom.viewmodel.UIStateSiswa
 import kotlinx.coroutines.launch
-
-object DestinasiEntry: DestinasiNavigasi {
-    override val route = "item_entry"
-    override val titleRes = R.string.entry_siswa
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -52,7 +46,8 @@ fun EntrySiswaScreen(
             SiswaTopAppBar(
                 title = stringResource(DestinasiEntry.titleRes),
                 canNavigateBack = true,
-                scrollBehavior = scrollBehavior
+                scrollBehavior = scrollBehavior,
+                navigateUp = navigateBack
             )
         }
     ) { innerPadding ->
@@ -89,7 +84,6 @@ fun EntrySiswaBody(
             onValueChange = onSiswaValueChange,
             modifier = Modifier.fillMaxWidth()
         )
-
         Button(
             onClick = onSaveClick,
             enabled = uiStateSiswa.isEntryValid,
@@ -121,7 +115,6 @@ fun FormInputSiswa(
             enabled = enabled,
             singleLine = true
         )
-
         OutlinedTextField(
             value = detailSiswa.alamat,
             onValueChange = { onValueChange(detailSiswa.copy(alamat = it)) },
@@ -130,7 +123,6 @@ fun FormInputSiswa(
             enabled = enabled,
             singleLine = true
         )
-
         OutlinedTextField(
             value = detailSiswa.telpon,
             onValueChange = { onValueChange(detailSiswa.copy(telpon = it)) },
@@ -140,17 +132,15 @@ fun FormInputSiswa(
             enabled = enabled,
             singleLine = true
         )
-
         if (enabled) {
             Text(
                 text = stringResource(R.string.required_field),
                 modifier = Modifier.padding(start = dimensionResource(id = R.dimen.padding_medium))
             )
         }
-
         Divider(
-            thickness = dimensionResource(id = R.dimen.padding_small),
-            modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium))
+            thickness = dimensionResource(R.dimen.padding_small),
+            modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium))
         )
     }
 }
