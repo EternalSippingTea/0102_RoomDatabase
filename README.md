@@ -12,7 +12,7 @@
 
 | Beranda Kosong | Form Tambah Siswa | Beranda Terisi |
 | :---: | :---: | :---: |
-| ![Beranda Kosong](screenshots/beranda_kosong.png) | ![Form Tambah Siswa](screenshots/form_tambah.png) | ![Beranda Terisi](screenshots/beranda_terisi.png) |
+| <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/eedbcc3c-5976-440c-af8b-c7917e577531" />| <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/e740dbd0-d879-45f2-989c-04470a0dc494" />|<img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/6a820e36-5fd1-424c-9797-0474523aab01" />|
 
 ---
 
