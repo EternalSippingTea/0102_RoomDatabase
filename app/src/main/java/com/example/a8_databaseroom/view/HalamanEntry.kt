@@ -24,7 +24,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.a8_databaseroom.R
-import com.example.a8_databaseroom.uicontroller.DestinasiNavigasi
+import com.example.a8_databaseroom.view.route.DestinasiNavigasi
 import com.example.a8_databaseroom.uicontroller.SiswaTopAppBar
 import com.example.a8_databaseroom.viewmodel.DetailSiswa
 import com.example.a8_databaseroom.viewmodel.EntryViewModel
