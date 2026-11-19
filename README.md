@@ -28,4 +28,5 @@
 
 | Dialog Konfirmasi Hapus | Bukti Data Dihapus |
 | :---: | :---: |
-| ![Dialog Hapus](screenshots/dialog_hapus.png) | ![Data Dihapus](screenshots/data_dihapus.png) |
+| <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/10bff517-a9c3-4a10-806b-43ebd3fb71f1" />| <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/02d039be-643d-4223-8806-4b9fc5f05d31" />
+|
