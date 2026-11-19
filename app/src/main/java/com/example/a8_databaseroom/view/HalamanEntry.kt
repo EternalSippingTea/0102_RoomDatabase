@@ -28,7 +28,7 @@ import com.example.a8_databaseroom.view.route.DestinasiNavigasi
 import com.example.a8_databaseroom.uicontroller.SiswaTopAppBar
 import com.example.a8_databaseroom.viewmodel.DetailSiswa
 import com.example.a8_databaseroom.viewmodel.EntryViewModel
-import com.example.a8_databaseroom.viewmodel.PenyediaViewModel
+import com.example.a8_databaseroom.viewmodel.provider.PenyediaViewModel
 import com.example.a8_databaseroom.viewmodel.UIStateSiswa
 import kotlinx.coroutines.launch
 
