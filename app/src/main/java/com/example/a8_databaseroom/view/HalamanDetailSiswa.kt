@@ -8,6 +8,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -27,6 +29,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.a8_databaseroom.R
+import com.example.a8_databaseroom.room.Siswa
 import com.example.a8_databaseroom.view.route.DestinasiDetailSiswa
 import com.example.a8_databaseroom.viewmodel.DetailSiswaUiState
 import com.example.a8_databaseroom.viewmodel.DetailViewModel
@@ -119,3 +122,55 @@ private fun BodyDetailDataSiswa(
         }
     }
 }
+
+@Composable
+fun DetailDataSiswa(
+    siswa: Siswa, modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier, colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.primaryContainer,
+            contentColor = MaterialTheme.colorScheme.onPrimaryContainer
+        )
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(dimensionResource(id = R.dimen.padding_medium)),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
+        ) {
+            BarisDetailData(
+                labelResID = R.string.nama1,
+                itemDetail = siswa.nama,
+                modifier = Modifier.padding(
+                    horizontal = dimensionResource(
+                        id = R.dimen
+                            .padding_medium
+                    )
+                )
+            )
+            BarisDetailData(
+                labelResID = R.string.alamat1,
+                itemDetail = siswa.alamat,
+                modifier = Modifier.padding(
+                    horizontal = dimensionResource(
+                        id = R.dimen
+                            .padding_medium
+                    )
+                )
+            )
+            BarisDetailData(
+                labelResID = R.string.telpon1,
+                itemDetail = siswa.telpon,
+                modifier = Modifier.padding(
+                    horizontal = dimensionResource(
+                        id = R.dimen
+                            .padding_medium
+                    )
+                )
+            )
+        }
+
+    }
+}
+
