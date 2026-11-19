@@ -36,7 +36,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.a8_databaseroom.R
 import com.example.a8_databaseroom.room.Siswa
 import com.example.a8_databaseroom.view.route.DestinasiNavigasi
-import com.example.a8_databaseroom.view.uicontroller.SiswaTopAppBar
 import com.example.a8_databaseroom.viewmodel.HomeViewModel
 import com.example.a8_databaseroom.viewmodel.provider.PenyediaViewModel
 
@@ -49,6 +48,7 @@ object DestinasiHome : DestinasiNavigasi {
 @Composable
 fun HomeScreen(
     navigatetoItemEntry: () -> Unit,
+    onItemClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ){
@@ -80,6 +80,7 @@ fun HomeScreen(
         val uiStateSiswa by viewModel.homeUiState.collectAsState()
         BodyHome(
             itemSiswa = uiStateSiswa.listSiswa,
+            onItemClick = onItemClick,
             modifier = Modifier
                 .padding(innerPadding)
                 .fillMaxSize()
@@ -91,6 +92,7 @@ fun HomeScreen(
 @Composable
 fun BodyHome(
     itemSiswa: List<Siswa>,
+    onItemClick: (Int) -> Unit,
     modifier: Modifier = Modifier){
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -105,6 +107,7 @@ fun BodyHome(
         } else {
             ListSiswa(
                 itemSiswa = itemSiswa,
+                onSiswaClick = { onItemClick(it.id) },
                 modifier = Modifier.padding(horizontal = dimensionResource(R.dimen.padding_small))
             )
         }
@@ -117,7 +120,7 @@ fun ListSiswa(
     onSiswaClick: (Siswa) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    LazyColumn(modifier = Modifier) {
+    LazyColumn(modifier = modifier) {
         items(items = itemSiswa, key = { it.id }) { person ->
             DataSiswa(
                 siswa = person,
@@ -153,7 +156,7 @@ fun DataSiswa(
                 Spacer(Modifier.weight(1f))
                 Icon(
                     imageVector = Icons.Default.Phone,
-                    contentDescription = null,
+                    contentDescription = null
                 )
                 Text(
                     text = siswa.telpon,
