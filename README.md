@@ -20,7 +20,7 @@
 
 | Detail Siswa (Awal) | Edit Data Siswa | Detail Siswa (Terupdate) |
 | :---: | :---: | :---: |
-| ![Detail Siswa Awal](screenshots/detail_awal.png) | ![Edit Data Siswa](screenshots/edit_siswa.png) | ![Detail Terupdate](screenshots/detail_terupdate.png) |
+| <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/505f4443-9165-4124-a82c-6cac5ecb716e" />| <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/7667a694-4e7c-4f46-afa3-39f6924a0871" />|<img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/96f05dae-c569-46b4-acf8-fd09c5516402" />|
 
 ---
 
