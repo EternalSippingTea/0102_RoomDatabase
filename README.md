@@ -1,7 +1,31 @@
-<img width="1080" height="2340" alt="image" src="https://github.com/user-attachments/assets/d8df908a-4eb5-4371-9415-73b5071f8647" />
+# Fitur Utama
 
-<img width="1080" height="2340" alt="image" src="https://github.com/user-attachments/assets/dd21bcdd-a951-43f6-9acf-7f8c11f6712c" />
+- Halaman Beranda
+- Tambah Data
+- Detail Data
+- Edit Data
+- Konfirmasi Hapus
 
-<img width="1080" height="2340" alt="image" src="https://github.com/user-attachments/assets/f5331018-caaf-421d-8317-c6d419c42617" />
+📸 Tangkapan Layar (Screenshots)
 
+### 1. Beranda Kosong & Form Tambah Data
 
+| Beranda Kosong | Form Tambah Siswa | Beranda Terisi |
+| :---: | :---: | :---: |
+| ![Beranda Kosong](screenshots/beranda_kosong.png) | ![Form Tambah Siswa](screenshots/form_tambah.png) | ![Beranda Terisi](screenshots/beranda_terisi.png) |
+
+---
+
+### 2. Detail, Edit, & Hapus Data
+
+| Detail Siswa (Awal) | Edit Data Siswa | Detail Siswa (Terupdate) |
+| :---: | :---: | :---: |
+| ![Detail Siswa Awal](screenshots/detail_awal.png) | ![Edit Data Siswa](screenshots/edit_siswa.png) | ![Detail Terupdate](screenshots/detail_terupdate.png) |
+
+---
+
+### 3. Dialog Konfirmasi Hapus & Bukti Data Dihapus
+
+| Dialog Konfirmasi Hapus | Bukti Data Dihapus |
+| :---: | :---: |
+| ![Dialog Hapus](screenshots/dialog_hapus.png) | ![Data Dihapus](screenshots/data_dihapus.png) |
