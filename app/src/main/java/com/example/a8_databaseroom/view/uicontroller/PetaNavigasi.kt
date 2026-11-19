@@ -1,4 +1,4 @@
-package com.example.a8_databaseroom.uicontroller
+package com.example.a8_databaseroom.view.uicontroller
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
